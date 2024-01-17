@@ -20,11 +20,11 @@ describe("i am test-suite-1", () => {
   });
 
   it("This is it-3", () => {
-    console.log("it-3")
+    console.log("test-case-3")
   });
 
   beforeAll(() => {
-    console.log("before all");               //1   initalization
+    console.log("before all");            //1   initalization
   });
   beforeEach(() => {                     // N # it()
     console.log("before each");

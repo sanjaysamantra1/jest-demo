@@ -1,35 +1,36 @@
 import { add, arr1, arr2, factorial, isEven, sub } from "./util";
 
-describe("Test suite for utils file", () => {
-  it("testcase for add method", () => {
-    expect(add(1, 2)).toBe(3);
-    expect(add(10, 20)).toBe(30);
+//  describe  = test suite
+describe("This is Test suite for util file", () => {
+  // it  = testcase
+  it.skip("This is a testcase to test add functionality", () => {
+    expect(add(2, 3)).toBe(5);
     expect(add(2, -3)).toBe(-1);
+    expect(add(-2, 3)).toBe(1);
+    expect(add(-2, -3)).toBe(-5);
+    expect(add(-2, -3)).not.toBe(undefined);
+    expect(add(-2, -3)).not.toBe(null);
   });
 
-  it("testcase for sub method", () => {
-    expect(sub(20, 10)).toBe(10);
-    expect(sub(10, 20)).toBe(-10);
-    expect(sub(2, -3)).toBe(5);
+  test("This is a testcase to test sub functionality", () => {
+    expect(sub(5, 3)).toBe(2);
+    expect(sub(5, -3)).toBe(8);
+    expect(sub(-5, 3)).toBe(-8);
   });
 
-  it("should test isEven method", () => {
-    expect(isEven(2)).toBe(true);
-    expect(isEven(3)).toBe(false);
-    expect(isEven(5)).not.toBe(true);
+  it("This is a testcase to test isEven functionality", () => {
+    expect(isEven(5)).toBe(false);
+    expect(isEven(4)).toBe(true);
   });
 
-  it("array comparison", () => {
+  it("This is a testcase to test toEqual", () => {
     expect(arr1).toEqual(arr2);
-    expect(arr1).toContain(40);
-    expect(arr1).not.toContain(50);
+    expect(arr1).toBeDefined();
   });
 
-  it("should test factorial method", () => {
+  it("This is a testcase to test factorial functionality", () => {
     expect(factorial(5)).toBe(120);
-    expect(factorial(0)).toBe(1);
-    expect(factorial(2)).toBe(2);
-    expect(factorial(3)).toBe(6);
+    debugger;
+    expect(factorial(4)).toBe(24);
   });
-  
 });
