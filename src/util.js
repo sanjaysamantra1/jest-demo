@@ -18,3 +18,18 @@ export function factorial(n) {
   }
   return n * factorial(n - 1);
 }
+
+export function fetchUser() {
+  return fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json())
+}
+export async function fetchComments() {
+  let res = await fetch('https://jsonplaceholder.typicode.com/comments');
+  let data = await res.json();
+  return data;
+}
+
+export function greet(userName, callback) {
+  for (let i = 1; i <= 10; i++) {
+    callback(userName)
+  }
+}
